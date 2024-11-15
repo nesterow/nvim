@@ -4,3 +4,6 @@ vim.api.nvim_create_user_command("New", function(opts)
   local cmd = "e %:h/" .. opts.args
   vim.cmd(cmd)
 end, { nargs = "+", desc = "New file in current directory" })
+
+--Disable annoying shit
+vim.cmd(":Copilot disable")
